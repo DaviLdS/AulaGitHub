@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h4>Atividade Pratica Fundamentos do JavaScript 2</h4>
+    <style>
+        .myDiv {
+            border: 3px outset red;
+            background-color: blanchedalmond;
+            text-align: justify;
+        }
+        .myDiv2 {
+            border: 3px outset orangered;
+            background-color: azure;
+            text-align: center;
+        }
+        </style>
+
+ <div class="myDiv2">
+    <br>
+    <div>Valor 1:
+        <input type="text" name="valor1" id="valor1"/>
+    </div>
+    <div>Valor 2:
+        <input type="text" name="valor2" id="valor2"/>
+    </div>
+    <br>
+    </div>
+    <br>
+ <div class="myDiv2">
+    <button onclick="Somar()">Somar</button>
+    </div>
+    <br>
+    <div class="myDiv">
+        <div>
+            Resultado Soma:
+            <a id="resultado-insert"></a>
+            <br>
+            Conclusão:
+            <a id="conclusao-insert"></a>
+            <br>
+            <a href="Cadastro.html">Ir para Pagina de Cadastro</a>
+        </div>
+    </div>
+</body>
+<script>
+function Somar() {
+    var valor1 = document.getElementById("valor1").value;
+    var valor2 = document.getElementById("valor2").value;
+    var elemResult = parseInt(valor1,10)+parseInt(valor2,10);
+    const result = document.getElementById('resultado-insert')
+    const conclu = document.getElementById('conclusao-insert')
+    TextDiv(elemResult,result)
+    if (elemResult>10){
+        conclu.innerText +=' '+ elemResult  + ' é maior que 10'
+    }
+    else {
+        conclu.innerText += ' '+ elemResult + ' não é maior que 10'
+    }
+    }
+function TextDiv(text,element){
+    element.innerText += '' + text
+}
+
+   </script>
+</html>

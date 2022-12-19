@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h4>Atividade Pratica Fundamentos do JavaScript</h4>
+    <style>
+        .myDiv {
+            border: 3px outset blueviolet;
+            background-color: lightcyan;
+            text-align: justify;
+        }
+        .myDiv2 {
+            border: 3px outset darkcyan;
+            background-color: azure;
+            text-align: center;
+        }
+        </style>
+
+ <div class="myDiv2">
+    <br>
+    <div>Seu Nome:
+        <input type="text" name="nome" id="nome"/>
+    </div>
+    <div>Sobrenome:
+        <input type="text" name="seunome" id="sobrenome"/>
+    </div>
+    <div>Seu Email:
+        <input type="email" name="email" id="email"/>
+    </div>
+    <br>
+    </div>
+    <br>
+ <div class="myDiv2">
+    <button onclick="Enviar()">Enviar</button>
+    </div>
+    <br>
+    <div class="myDiv">
+        <div>
+            Nome:
+            <a id="nome-insert"></a>
+        </div>
+        <div>
+            Sobrenome:
+            <a id="sobrenome-insert"></a>
+        </div>
+        <div>
+            Email:
+            <a id="email-insert"></a>
+            <br>
+            <a href="Calculo.html">Ir para pagina de Calculo</a>
+        </div>
+    </div>
+</body>
+<script>
+    function Enviar(){
+    const nomeText = document.getElementById('nome').value
+    const sobrenomeText = document.getElementById('sobrenome').value
+    const emailText = document.getElementById('email').value
+
+    const nomeInsert = document.getElementById('nome-insert')
+    const sobrenomeInsert = document.getElementById('sobrenome-insert')
+    const emailInsert = document.getElementById('email-insert')
+
+    TextDiv(nomeText,nomeInsert)
+    TextDiv(sobrenomeText,sobrenomeInsert)
+    TextDiv(emailText,emailInsert)
+    }
+    function TextDiv(text, element){
+        element.innerText += '' + text
+    }
+   </script>
+</html>
